@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 本地的浏览器进行存储的数据 -->
+    <!-- 我们主要学习增删改查 -->
+    <input type="text" id="input" placeholder="请输入数据我们进行获取">
+    <button  class="get" type="button">存取数据</button><button type="button">获取数据</button><button type="button">删除数据</button><button type="button">清空数据</button>
+     <!-- 记住用户名案例 -->
+     <input type="text" id = 'rember'>   <input id="user" type="checkbox">记住我的用户名子</input>
+</body>
+<script>
+    var  input  = document.getElementById('input');
+    var get = document.getElementsByTagName('button');
+    // 进行数据的存储
+    // get[0].addEventListener('click', function () {
+    //       var val = input.value;
+    //         sessionStorage.setItem('name',val);
+    //         sessionStorage.setItem('password',val);
+    //         sessionStorage.setItem('age',val);
+    //         sessionStorage.setItem('year',val);
+        
+    //  })
+    //   进行数据的获得
+    //   get[1].addEventListener('click',function(){
+    //     console.log(sessionStorage.getItem('name'));
+    //   })
+    //   get[2].addEventListener('click',function(){
+    //     sessionStorage.removeItem('name')
+    //   })
+    //    这个是清除所有的
+    //   get[3].addEventListener('click',function(){
+    //     sessionStorage.clear()
+    //   })
+    //   这个是以上的sessionStorage的使用方法
+    //  *******************************************************************************************************
+    // 我们来学习下localStoreage的使用方法
+    //   get[0].addEventListener('click',function(){
+        // var val = input.value;
+        // var val = input.value;
+        // localStorage.setItem('name',val);
+        // localStorage.setItem('passwoed',val)
+        // localStorage.setItem('age',val)
+        // localStorage.setItem('rat',val)
+    //   })
+    //  get[0].addEventListener('click', function () {
+    //       var val = input.value;
+    //         localStorage.setItem('name',val);
+    //         localStorage.setItem('password',val);
+    //         localStorage.setItem('age',val);
+    //         localStorage.setItem('year',val);
+        
+    //  })
+    //  get[1].addEventListener('click', function () {
+    //     console.log( localStorage.getItem('name'));
+    //     console.log( localStorage.getItem('password'));
+    //     console.log( localStorage.getItem('age'));
+    //     console.log( localStorage.getItem('year'));
+    //  })
+    //  get[2].addEventListener('click',function(){
+    //         localStorage.removeItem('year');
+    //  })
+    //  get[3].addEventListener('click',function(){
+    //         localStorage.clear();
+    //  })
+    // 获取文本框  获取按钮   这个晚上在看下吧，我去git学习下
+    var  input = document.getElementById('rember');
+    var btn = document.getElementById('user');
+        if ( localStorage.getItem('name')) {
+            input.value = localStorage.getItem('name');
+            btn.checked = true;
+        }
+
+        input.addEventListener('change',function(){
+            if (this.checked) {
+            input.value = localStorage.setItem('name',input.value);
+            } else{
+                localStorage.removeItem('name')
+            }
+        })       
+</script>
+</html>

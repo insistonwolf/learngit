@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //   写一个冒泡函数
+            function odd(...argu){
+            for(var i = 0; i < arguments.length-1;i++){
+                for( var j = 0; j < arguments.length -i -1;j++){
+                    if (arguments[j] > arguments[j+1]) {
+                    var tem = arguments[j];
+                     arguments[j] = arguments[j+1];
+                     arguments[j+1] = tem;
+                 }
+                }
+                console.log(arguments[i]);
+            }
+               return arguments; //我是返回了所有排完后的参数
+            }
+            // odd(2,9,75,84,52,68,4,6,7)
+            console.log( odd(2,9,75,84,52,68,4,6,7));
+            // 数组定义的可以用
+            // var arry= [2,9,75,84,52,68,4,6,7];
+            // for(var i = 0; i < arry.length-1;i++){
+            //     for( var j = 0; j < arry.length -i -1;j++){
+            //         if (arry[j] > arry[j+1]) {
+            //         var tem = arry[j];
+            //         arry[j] = arry[j+1];
+            //         arry[j+1] = tem;
+            //      }
+            //     }
+            // }
+            
+            // console.log(arry);
+        //  二  算法之数去重  方法一   方法二  方法三
+             
+        //  三  递归
+        //  四 算法之快速排序
+        //  五 插入排序
+        //  六 选择排序
+        
+           
+</script>
+</html>
